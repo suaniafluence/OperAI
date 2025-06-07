@@ -5,3 +5,5 @@ motor
 python-dotenv
 openai
 fpdf2
+python-jose[cryptography]
+httpx

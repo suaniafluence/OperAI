@@ -58,6 +58,9 @@ Lancer l'API en développement :
 uvicorn app.main:app --reload
 ```
 
+L'API GraphQL est disponible via `/graphql`. La route `/transcribe`
+permet d'envoyer un fichier audio pour transcription via Whisper.
+
 ## Fonctionnement
 
 1. L'utilisateur interagit avec un **Custom GPT** configuré pour appeler les
