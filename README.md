@@ -47,19 +47,19 @@ MONGODB_URI=your_mongodb_connection_string
 MONGO_DB_NAME=erp_ia_db
 
 # Auth0
-AUTH0_DOMAIN=your-auth0-domain
-AUTH0_API_AUDIENCE=your-auth0-audience
-AUTH0_CLIENT_ID=your-client-id
-AUTH0_CLIENT_SECRET=your-client-secret
+AUTH0_DOMAIN=your-auth0-domain  
+AUTH0_API_AUDIENCE=your-auth0-audience  
+AUTH0_CLIENT_ID=your-client-id  
+AUTH0_CLIENT_SECRET=your-client-secret  
 
 # OpenAI / Whisper API
-OPENAI_API_KEY=your_openai_key
+OPENAI_API_KEY=your_openai_key  
 
 # DeepSeek / LLM Local (optionnel)
-LLM_API_ENDPOINT=https://api.deepseek.com/v1/generate
+LLM_API_ENDPOINT=https://api.deepseek.com/v1/generate 
 
 # EC2 Local Storage Path
-LOCAL_STORAGE_PATH=/path/to/store/pdfs
+LOCAL_STORAGE_PATH=/path/to/store/pdfs 
 4. Lancer l'API
 bash
 Copier
