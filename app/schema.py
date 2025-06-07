@@ -1,16 +1,16 @@
 import strawberry
-from typing import List
+from typing import List, Annotated
 
 from .models import StockItem, Order, Quote, Invoice
 from .database import collection
 from .utils import generate_pdf
 from .auth import verify_token
 
-@strawberry.experimental.pydantic.input(model=StockItem, all_fields=True)
+@strawberry.experimental.pydantic.input(model=StockItem, fields=["name", "quantity"])
 class StockInput:
     pass
 
-@strawberry.experimental.pydantic.type(model=StockItem, all_fields=True)
+@strawberry.experimental.pydantic.type(model=StockItem, fields=["name", "quantity"])
 class StockType:
     pass
 
@@ -28,9 +28,8 @@ class Mutation:
         self,
         info,
         data: StockInput,
-        payload: dict = strawberry.private[dict](None),
     ) -> StockType:
-        payload = await verify_token(info.context["request"])
+        await verify_token(info.context["request"])
         doc = data.to_pydantic().dict()
         doc["type"] = "stock"
         res = await collection.insert_one(doc)
