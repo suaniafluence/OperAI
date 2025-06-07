@@ -1,0 +1,7 @@
+fastapi
+strawberry-graphql
+uvicorn
+motor
+python-dotenv
+openai
+fpdf2
