@@ -43,7 +43,7 @@ bash
 Copier
 Modifier
 # MongoDB
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URI=your_mongodb_connection_string  
 MONGO_DB_NAME=erp_ia_db
 
 # Auth0
